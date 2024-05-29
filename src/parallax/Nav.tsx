@@ -1,8 +1,7 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../components/Style.css";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -62,7 +61,6 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
-
   return (
     <>
       <div className="z-50 fixed flex flex-col items-center ">
@@ -78,7 +76,6 @@ const Navbar = () => {
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width=""
                 viewBox="0 0 24 24"
                 className="w-6 h-6 "
               >
@@ -90,14 +87,14 @@ const Navbar = () => {
             <motion.ul
               className={` transition-nav  ${
                 scrolled
-                  ? "rounded-lg  bg-gray-800 text-red-500 border-[3px] border-red-500"
+                  ? "rounded-lg  bg-gray-800 text-red-500 border-[3px] border-red-500 "
                   : "bg-transparent border-[3px] border-transparent"
               } w-fit hidden md:flex justify-end items-center text-white `}
             >
               {items.map((item) => (
                 <motion.li variants={navItem} key={item}>
                   <Link to={item} spy={true} smooth={true} duration={3000}>
-                    <div className="w-fit p-2  px-5  nav-list "  >
+                    <div className="w-fit p-2  px-5  nav-list ">
                       {item.toUpperCase()}
                     </div>
                   </Link>

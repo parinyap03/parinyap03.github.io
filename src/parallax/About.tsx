@@ -1,101 +1,98 @@
-import C2 from "@/assets/character/c2.png";
 import "./Style.css";
-// import "./AboutStyle.css";
-
-import {
-  motion
-} from "framer-motion";
-// interface ParallaxProps {
-//   children: string;
-//   baseVelocity: number;
-// }
-
-// function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
-//   const baseX = useMotionValue(0);
-//   const { scrollY } = useScroll();
-//   const scrollVelocity = useVelocity(scrollY);
-//   const smoothVelocity = useSpring(scrollVelocity, {
-//     damping: 50,
-//     stiffness: 400,
-//   });
-//   const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-//     clamp: false,
-//   });
-
-//   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
-
-//   const directionFactor = useRef<number>(1);
-//   useAnimationFrame((t, delta) => {
-//     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-
-//     if (velocityFactor.get() < 0) {
-//       directionFactor.current = -1;
-//     } else if (velocityFactor.get() > 0) {
-//       directionFactor.current = 1;
-//     }
-
-//     moveBy += directionFactor.current * moveBy * velocityFactor.get();
-
-//     baseX.set(baseX.get() + moveBy);
-//   });
-
-//   // return (
-//   //   <div className="parallax">
-//   //     <motion.div className="scroller" style={{ x }}>
-//   //       {[...Array(15)].map((_, i) => (
-//   //         <span key={i}>{children} </span>
-//   //       ))}
-//   //     </motion.div>
-//   //   </div>
-//   // );
-//   return (
-//     <div className="parallax">
-//       <motion.div className="scroller" style={{ x }}>
-//         <span>{children} </span>
-//         <span>{children} </span>
-//         <span>{children} </span>
-//         <span>{children} </span>
-//       </motion.div>
-//     </div>
-//   );
-// }
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import daysk from "@/assets/sky/daysk.jpg";
+import pinktree from "@/assets/sky/pinktree.jpg";
+import cpsk from "@/assets/sky/cpsk.jpg";
+import moon from "@/assets/sticker/stk-red-moon.png";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const About = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
   return (
-    <div className="z-40 w-full  relative sm:mt-[0px]">
-   
-      <div className=" text-neutral-300   text-center">
-  
-        <div className="flex-col sm:h-full sm:p-10 md:flex sm:flex  justify-center lg:flex lg:mt-[100px] items-center w-full lg:h-[700px] md:mt-[10px] 2xl:mt-[0px] xl:mt-0 ">
-          <motion.img
-            animate={{
-              y: [0, -10, 0],
-            }}
+    <>
+      <div ref={ref} className=" lg:px-[100px] h-screen ">
+        <div className="container  mx-auto flex flex-col md:flex-row items-center  md:my-36 justify-around w-full  ">
+          <motion.div
+            initial={{ opacity: 0, x: -48 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{
-              duration: 5,
-              repeat: Infinity,
+              duration: 0.8,
+              ease: [0, 0, 0, 1],
             }}
-            src={C2}
-            alt=""
-            className="lg:w-[350px] sm:w-[250px] w-[200px]  m-auto"
-          />
-
-          <div className="article flex-col justify-center items-center  text-balance">
-            <div className="px-10 lg:text-6xl sm:text-[45px]">
-              My name is <span className="text-red-400">Parinyaporn Saengnolad</span>
+            className="flex flex-col w-full lg:w-1/2 justify-center items-start p-4 py-10   "
+          >
+            <div className="txt-slide text-5xl">
+              <div className="flex items-center text-white p-2">
+                Hell
+                <img
+                  src={moon}
+                  alt="stk-could"
+                  className="w-[50px] mr-[10px]"
+                />{" "}
+                I'm
+                <div className="roller ">
+                  <span id="rolltext">
+                    Parinyaporn
+                    <br />
+                    CS Student
+                    <br />
+                    Web Developer
+                  </span>
+                </div>
+              </div>
             </div>
+            <div className="text-[30px] md:text-base text-gray-50 mb-4 indent-5 p-2 tracking-widest">
+              I am a computer science student from College of Computing Khon
+              Kaen University. Who have been learning programming for 3 years
+              and always ready to learn new things. I am interested in web
+              development and like to create a minimal design.
+            </div>
+            <div className="p-2 flex justify-center sm:justify-start">
+              <a
+                href="https://github.com/parinyap03"
+                className="bg-transparent hover:bg-[#EF4444] text-[#EF4444] hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-[#EF4444] hover:border-transparent"
+              >
+                Explore My Github
+                <FontAwesomeIcon icon={faGithub} className="ml-2" />
+              </a>
+            </div>
+          </motion.div>
 
-             <p className="px-10 p-10 lg:text-xl sm:text-sm">
-              I am a computer science student from College of Computing Khon Kaen University. Who have been learning programming for 3 years
-              and always ready to learn new things. I am interested in web development and like to create a minimal and clean design. 
-            </p> 
-             
-          </div>
+          <motion.div
+         
+            initial={{ opacity: 0, x: 38 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{
+              duration: 0.8,
+              ease: [0, 0, 0, 1],
+            }}
+          >
+            <div className="sky-img h-full">
+              <p>
+                <span>
+                  <img src={daysk} alt="sky" className="img-about" />
+                </span>
+              </p>
+              <p>
+                <span>
+                  <img src={cpsk} alt="cpsk" className="img-about" />
+                </span>
+              </p>
+              <p>
+                <span>
+                  <img src={pinktree} alt="pinktree" className="img-about" />
+                </span>
+              </p>
+            </div>
+            <div className="flex justify-end">Bam's photo </div>
+          </motion.div>
         </div>
       </div>
-      {/* <div className="absolute w-full h-[25%] bottom-0 left-0 bg-gradient-to-t from-[#06141D] to-transparent z-40"></div> */}
-    </div>
-
-   
+    </>
   );
 };
 

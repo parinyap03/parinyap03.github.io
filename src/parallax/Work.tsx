@@ -1,14 +1,14 @@
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import "./Style.css";
-import pokemonv1 from "../assets/pokemonv1.png";
-import pokemonv2 from "../assets/pokemonv2.png";
-import digital from "../assets/digital.png";
-import harry from "../assets/harry.png";
-import form from "../assets/form.png";
-import quiz from "../assets/quiz.png";
-import flex from "../assets/flex.png";
-import news from "../assets/news.png";
-import vocab from "../assets/vocab.png";
+import pokemonv1 from "../assets/works/pokemonv1.png";
+import pokemonv2 from "../assets/works/pokemonv2.png";
+import digital from "../assets/works/digital.png";
+import harry from "../assets/works/harry.png";
+import form from "../assets/works/form.png";
+import quiz from "../assets/works/quiz.png";
+import flex from "../assets/works/flex.png";
+import news from "../assets/works/news.png";
+import vocab from "../assets/works/vocab.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -93,6 +93,8 @@ const work = [
     skills: ["TS", "Tailwind", "HTML", "CSS"],
   },
 ];
+
+// Work component swipers
 const Work = () => {
 
   const [ref, inView] = useInView({

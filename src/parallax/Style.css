@@ -30,20 +30,6 @@
   margin-bottom: 0.8rem;
 }
 
-/* .text-head{
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-} */
-/* 
-.progress {
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: var(--accent);
-  bottom: 100px;
-} */
-
 .parallax {
   overflow: hidden;
   letter-spacing: -2px;
@@ -165,14 +151,14 @@ section > div {
 }
 
 .page-background {
-  background-image: url("/src/assets/computer.png"); /* Replace with your image path */
+  background-image: url("/src/assets/computer.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white; /* Set text color to contrast with background image */
+  color: white;
 }
 
 .text-bg {
@@ -180,8 +166,7 @@ section > div {
 }
 
 .title {
-  background: url("https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    center no-repeat;
+  background: url("/src/assets/sky/star.jpg");
   background-position: 40% 50%;
   -webkit-background-clip: text;
   color: transparent;
@@ -189,21 +174,144 @@ section > div {
   letter-spacing: 0.1em;
   line-height: 1.3em;
   text-anchor: middle;
-  alignment-baseline: hanging;
-  /* font-size: 80px; */
   text-align: center;
 }
 
 .article {
-  /*  leverage cascade for cross-browser gradients  */
-  background: radial-gradient(#E4664C, hsl(0, 0%, 100%)) fixed;
-  background: conic-gradient(
-      #E4664C,
-      hsl(0, 0%, 100%),
-      #E4664C
-    )
-    fixed;
+  background: radial-gradient(#e4664c, hsl(0, 0%, 100%)) fixed;
+  background: conic-gradient(#e4664c, hsl(0, 0%, 100%), #e4664c) fixed;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
+}
+
+.desc-card {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.img-about {
+  transform: scale(1);
+  transition: transform 0.1s ease-in-out;
+  filter: grayscale(50%);
+}
+
+.img-about:hover {
+  transform: scale(1);
+  filter: grayscale(0%);
+}
+
+.sky-img {
+  width: 350px;
+  height: 300px;
+  display: flex;
+  gap: 20px;
+}
+
+.sky-img p {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sky-img p:hover {
+  flex: 4;
+}
+
+.sky-img p span {
+  min-width: 15em;
+  padding: 0.5em;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 4rem;
+}
+
+.roller {
+  height: 4.2rem;
+  line-height: 4.1rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 480px;
+  color: #ef4444;
+  left: 10px;
+}
+
+.roller #rolltext {
+  position: absolute;
+  top: 0;
+  animation: slide 7s infinite;
+}
+
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -4rem;
+  }
+  50% {
+    top: -8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #f1faee;
+    font-size: 2.125rem;
+  }
+
+  .roller {
+    height: 2.6rem;
+    line-height: 2.125rem;
+  }
+
+  #spare-time {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .roller #rolltext {
+    animation: slide-mob 5s infinite;
+  }
+
+  @keyframes slide-mob {
+    0% {
+      top: 0;
+    }
+    25% {
+      top: -2.125rem;
+    }
+    50% {
+      top: -4.25rem;
+    }
+  }
+}
+
+.card-work:hover .img-work {
+  transition: opacity 0.3s ease-in;
+  opacity: 1;
+}
+.card-work .img-work {
+  opacity: 0.8;
+  transition: opacity 0.2s ease-out;
+}
+.card-work:hover{
+  box-shadow: 0px 0px 30px 5px rgba(255, 255, 255, 0.3);
+
 }
