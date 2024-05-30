@@ -43,7 +43,7 @@ const App = () => {
         </ScrollPage>
         <ScrollPage className="bg-black ">
           <div></div>
-        </ScrollPage>
+        </ScrollPage> 
         <ScrollPage className="bg-black ">
           <Animator animation={ZoomInScrollOut}>
             <div className=" flex justify-end px-[330px] text-white ">
@@ -84,6 +84,7 @@ const App = () => {
         </ScrollPage>
 
         <ScrollPage className="bg-[#06141D] " style={{ height: "fit-content" }}>
+          
           <div id="works">
             <Work />
           </div>

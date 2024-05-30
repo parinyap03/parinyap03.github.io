@@ -12,8 +12,9 @@
   
   .screen {
     position: relative;
-    background: #3e3e3e;
+    background: #0a1e2b;
     border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(106, 105, 105, 0.4);
   }
   
   .screen:after {
@@ -33,7 +34,7 @@
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    background: #4d4d4f;
+    background: #184a69;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
   }
