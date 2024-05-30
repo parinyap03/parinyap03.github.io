@@ -1,4 +1,4 @@
-import React from "react";
+
 import ParallaxText from "./TxtParallax";
 import "./contactStyle.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
