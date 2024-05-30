@@ -2,7 +2,6 @@ import React from "react";
 import ParallaxText from "./TxtParallax";
 import "./contactStyle.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faGithub, faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";

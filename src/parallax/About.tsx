@@ -4,7 +4,6 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import daysk from "@/assets/sky/daysk.jpg";
 import pinktree from "@/assets/sky/pinktree.jpg";
 import cpsk from "@/assets/sky/cpsk.jpg";
-import smile from "@/assets/sticker/stk-smile.png";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ParallaxText from "./TxtParallax";
