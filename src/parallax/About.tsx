@@ -4,9 +4,10 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import daysk from "@/assets/sky/daysk.jpg";
 import pinktree from "@/assets/sky/pinktree.jpg";
 import cpsk from "@/assets/sky/cpsk.jpg";
-import moon from "@/assets/sticker/stk-red-moon.png";
+import smile from "@/assets/sticker/stk-smile.png";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import ParallaxText from "./TxtParallax";
 const About = () => {
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -14,8 +15,10 @@ const About = () => {
   });
   return (
     <>
+    <ParallaxText text="About Me"></ParallaxText>
       <div ref={ref} className=" lg:px-[100px] h-screen ">
         <div className="container  mx-auto flex flex-col md:flex-row items-center  md:my-36 justify-around w-full  ">
+          
           <motion.div
             initial={{ opacity: 0, x: -48 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -25,15 +28,12 @@ const About = () => {
             }}
             className="flex flex-col w-full lg:w-1/2 justify-center items-start p-4 py-10   "
           >
+            
             <div className="txt-slide text-5xl">
               <div className="flex items-center text-white p-2">
-                Hell
-                <img
-                  src={moon}
-                  alt="stk-could"
-                  className="w-[50px] mr-[10px]"
-                />{" "}
-                I'm
+                <div>Hello</div>
+             <div className="px-4"> I'm</div>
+                
                 <div className="roller ">
                   <span id="rolltext">
                     Parinyaporn

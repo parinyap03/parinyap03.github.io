@@ -37,13 +37,13 @@ const Home = () => {
 
   return (
     <div
+      ref={ref}
+      className="w-full h-screen overflow-hidden relative grid place-items-center"
       style={{
         backgroundImage: `url(${imgfull})`,
         backgroundPosition: "bottom",
         backgroundSize: "cover",
       }}
-      ref={ref}
-      className="w-full h-screen overflow-hidden relative grid place-items-center"
     >
       <motion.div className="flex justify-evenly lg:justify-end md:justify-end sm:justify-end font-bold text-white relative z-10 mb-[200px]">
         <motion.h1
@@ -53,12 +53,12 @@ const Home = () => {
           }}
           className="title min-[430px]:text-[60px] lg:ml-[300px] lg:text-[120px] md:text-[80px] sm:text-[70px] min-[320px]:text-[40px] min-[320px]:ml-[70px] font-bold"
         >
-          PORTFOLIO
+          PARINYAPORN
         </motion.h1>
         <motion.img
           src={moon}
           style={{ y: moonY }}
-          className="lg:w-40 lg:h-40 md:w-40 md:h-40 mt-[-100px] lg:mr-[10px] xl:ml-[80px] opacity-50 min-[320px]:w-[130px] min-[320px]:h-[130px] min-[320px]:ml-[-30px]"
+          className=" lg:w-40 lg:h-40 md:w-40 md:h-40 mt-[-100px] lg:mr-[10px] xl:ml-[50px] opacity-50 min-[320px]:w-[130px] min-[320px]:h-[130px] min-[320px]:ml-[-30px]"
         />
       </motion.div>
       <div

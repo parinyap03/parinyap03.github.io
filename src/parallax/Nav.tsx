@@ -15,7 +15,7 @@ const Navbar = () => {
     }
   };
 
-  const items = ["home", "about", "works"];
+  const items = ["home", "about", "works", "contact"];
 
   const navList = {
     visible: {

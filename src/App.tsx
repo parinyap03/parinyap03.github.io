@@ -3,6 +3,8 @@ import About from "./parallax/About";
 import Nav from "./parallax/Nav";
 import Social from "./parallax/Social";
 import Work from "./parallax/Work2";
+import Contact from "./parallax/Contact";
+
 import "@/parallax/Style.css";
 import "./index.css";
 import {
@@ -15,8 +17,8 @@ import {
   ZoomIn,
   batch,
 } from "react-scroll-motion";
-import { useEffect} from "react";
-import ParallaxText from "./parallax/TxtParallax";
+import { useEffect } from "react";
+
 import Lenis from "lenis";
 
 const App = () => {
@@ -58,12 +60,12 @@ const App = () => {
 
         <ScrollPage className="bg-[#06141D]">
           <div id="about">
-            <ParallaxText text="About Me"></ParallaxText>
             <Animator animation={FadeIn()}>
               <About />
             </Animator>
           </div>
-        </ScrollPage>
+        </ScrollPage> 
+        
         <ScrollPage className="bg-black ">
           <div></div>
         </ScrollPage>
@@ -83,11 +85,17 @@ const App = () => {
 
         <ScrollPage className="bg-[#06141D] " style={{ height: "fit-content" }}>
           <div id="works">
-            <ParallaxText text="My Works"></ParallaxText>
             <Work />
           </div>
         </ScrollPage>
+
+        <ScrollPage className="bg-[#06141D] ">
+          <div id="contact">
+            <Contact />
+          </div>
+        </ScrollPage>
       </ScrollContainer>
+
       <div className="z-50 fixed bottom-10 left-10">
         <Social />
       </div>
